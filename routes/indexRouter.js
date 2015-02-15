@@ -21,7 +21,7 @@ var structure = immstruct({
 
 var component = react.renderToString(App({cursor: structure.cursor(), currentPage}));
 
-router.get('/', function(req, res) {
+router.get('/', (req, res) => {
   res.render('index', {title: 'Express', component: component, env: app.get('env')});
 });
 
