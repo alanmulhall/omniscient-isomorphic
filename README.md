@@ -6,5 +6,6 @@ A quick prototype using Omniscient, React and Express js to build a isomorphic a
 * Install node
 * cd into application route directory and run ```npm install```
 * Open a terminal session and run the express server ```npm start```
-* Open another terminal session to run the client code via the built in webpack dev server ```npm run client```
+* Open another terminal session and cd into the application route directory
+* Run the client code via the built in webpack dev server ```npm run client```
 * Open a web browser: ```localhost:3000```
