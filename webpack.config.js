@@ -3,7 +3,7 @@ module.exports = {
     output: {
         path: __dirname + '/build',
         publicPath: '/',
-        filename: 'js/app.js'
+        filename: 'app.js'
     },
     resolve: {
         extensions: ['', '.js']
@@ -11,12 +11,8 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js$/,
-            // Ignore node packages
             exclude: /node_modules\//,
             loader: '6to5?experimental'
-        }, {
-            test: /\.css$/,
-            loader: 'style!css'
         }, {
             test: /\.png$/,
             loader: 'file?name=img/[hash].[ext]'

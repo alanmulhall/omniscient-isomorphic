@@ -1,3 +1,5 @@
+// Based on
+// https://github.com/seanhess/personal-timeline/blob/master/app/index.jsx
 require('6to5/polyfill');
 
 //if (process.env.NODE_ENV !== 'production') {
@@ -6,16 +8,19 @@ omniscient.debug();
 //}
 
 import react from 'react';
+import {DOM} from 'react';
+var {a, br, div} = DOM;
 import immutable from 'immutable';
 import immstruct from 'immstruct';
 import App from './App';
+import Home from './Home';
+import Contact from './Contact';
 import page from 'page';
 
 // Make React DevTools work
 window.React = react;
 
-// Include styles, html
-require('file?name=index.html!../index.html');
+var currentPage = null;
 
 var structure = immstruct({
     greeting: 'Hello World!',
@@ -24,18 +29,24 @@ var structure = immstruct({
     }
 });
 
+function route(f) {
+  return (ctx) => {
+    // this function is called every time the url changes
+    currentPage = f(ctx);
+    render();
+  }
+}
+
 // Routes
-page('/', (ctx) => {
-    return render();
-});
-
-page('/contact', (ctx) => {
-    return render();
-});
-
+page('/', route((ctx) => () => Home({cursor: structure.cursor()})));
+page('/contact', route((ctx) => () => Contact({cursor: structure.cursor(['person', 'name'])})));
 page();
 
 // Main render cycle
 function render() {
-    react.render(App(structure.cursor()), document.getElementById('app'));
+    if (!currentPage) {
+        return;
+    }
+
+    react.render(App({cursor: structure.cursor(), currentPage: currentPage}), document.getElementById('app'));
 }
