@@ -13,7 +13,7 @@ var currentPage = () => Contact();
 var app = express();
 
 var structure = immstruct({
-    greeting: 'Hello from the server',
+    greeting: 'A react application',
     person: {
         name: 'alan'
     }

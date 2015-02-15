@@ -13,7 +13,7 @@ var currentPage = () => Home();
 var app = express();
 
 var structure = immstruct({
-    greeting: 'This is the home page',
+    greeting: 'A react application',
     person: {
         name: 'alan'
     }

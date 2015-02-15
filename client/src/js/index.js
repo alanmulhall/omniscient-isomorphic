@@ -23,7 +23,7 @@ window.React = react;
 var currentPage = null;
 
 var structure = immstruct({
-    greeting: 'Hello World!',
+    greeting: 'A react application',
     person: {
         name: 'alan'
     }
