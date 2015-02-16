@@ -27,6 +27,8 @@ let structure = immstruct({
   }
 });
 
+structure.on('swap', render);
+
 require('file?name=index.html!../index.html');
 
 function route(f) {
