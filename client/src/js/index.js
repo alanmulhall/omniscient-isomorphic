@@ -23,10 +23,10 @@ window.React = react;
 let currentPage = null;
 
 const structure = immstruct({
-    greeting: 'A react application',
-    person: {
-        name: 'alan'
-    }
+  greeting: 'A react application',
+  person: {
+    name: 'alan'
+  }
 });
 
 function route(f) {
@@ -44,9 +44,9 @@ page();
 
 // Main render cycle
 function render() {
-    if (!currentPage) {
-        return;
-    }
+  if (!currentPage) {
+    return;
+  }
 
-    react.render(App({cursor: structure.cursor(), currentPage: currentPage}), document.getElementById('app'));
+  react.render(App({cursor: structure.cursor(), currentPage: currentPage}), document.getElementById('app'));
 }

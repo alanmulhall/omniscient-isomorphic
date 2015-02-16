@@ -13,10 +13,10 @@ let currentPage = () => Home();
 let app = express();
 
 const structure = immstruct({
-    greeting: 'A react application',
-    person: {
-        name: 'alan'
-    }
+  greeting: 'A react application',
+  person: {
+    name: 'alan'
+  }
 });
 
 let component = react.renderToString(App({cursor: structure.cursor(), currentPage}));
