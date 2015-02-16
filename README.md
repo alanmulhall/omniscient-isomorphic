@@ -4,7 +4,7 @@ A quick prototype using Omniscient, React and Express js to build a isomorphic a
 
 ### Install
 * Install node
-* Install webpack-dev-server globally: ```npm install webpack-dev-server -g```
+* Install webpack-dev-server globally: ```npm install webpack-dev-server 6to5 -g```
 * cd into application route directory and run ```npm install```
 
 ### Build and Run
