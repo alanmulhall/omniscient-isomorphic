@@ -1,4 +1,4 @@
-# Prototype of Omniscient isomorphic application
+# Omniscient isomorphic prototype
 
 A quick prototype using Omniscient, React and Express js to build a isomorphic app. Its not production ready but serves as a proof of concept.
 
