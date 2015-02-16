@@ -9,7 +9,7 @@ omniscient.debug();
 
 import react from 'react';
 import {DOM} from 'react';
-var {a, br, div} = DOM;
+const {a, br, div} = DOM;
 import immutable from 'immutable';
 import immstruct from 'immstruct';
 import App from './App';
@@ -20,9 +20,9 @@ import page from 'page';
 // Make React DevTools work
 window.React = react;
 
-var currentPage = null;
+let currentPage = null;
 
-var structure = immstruct({
+const structure = immstruct({
     greeting: 'A react application',
     person: {
         name: 'alan'

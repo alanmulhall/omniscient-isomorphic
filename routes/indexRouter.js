@@ -1,28 +1,28 @@
 import express from 'express';
-var router = express.Router();
+let router = express.Router();
 
 import react from 'react';
 import {DOM} from 'react';
-var {a, br, div} = DOM;
+const {a, br, div} = DOM;
 import immutable from 'immutable';
 import immstruct from 'immstruct';
 import App from '../client/src/js/App';
 import Home from '../client/src/js/Home';
 
-var currentPage = () => Home();
-var app = express();
+let currentPage = () => Home();
+let app = express();
 
-var structure = immstruct({
+const structure = immstruct({
     greeting: 'A react application',
     person: {
         name: 'alan'
     }
 });
 
-var component = react.renderToString(App({cursor: structure.cursor(), currentPage}));
+let component = react.renderToString(App({cursor: structure.cursor(), currentPage}));
 
 router.get('/', (req, res) => {
   res.render('index', {title: 'Express', component: component, env: app.get('env')});
 });
 
-export {router as indexRouter};
+export default router;

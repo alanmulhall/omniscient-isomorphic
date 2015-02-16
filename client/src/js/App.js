@@ -1,5 +1,5 @@
 import {DOM} from 'react';
-var {div} = DOM;
+const {div} = DOM;
 import component from 'omniscient';
 
 export default component(

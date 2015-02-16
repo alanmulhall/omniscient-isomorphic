@@ -1,3 +1,5 @@
+//Based on
+//https://github.com/jcranendonk/todomvc-omniscient
 module.exports = {
     entry: './client/src/js/index',
     output: {
