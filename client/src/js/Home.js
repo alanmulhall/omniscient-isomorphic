@@ -5,6 +5,7 @@ import component from 'omniscient';
 export default component(
   'Home',
   (props) => {
+    console.log(props);
     return (
       div(null,
         'This is the home page',

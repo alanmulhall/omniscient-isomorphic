@@ -8,7 +8,6 @@ export default component(
     return (
       div(null,
         'This is the contact page',
-        //props.cursor.deref(),
         br(null),
         a({href: '/'}, 'go home')
       )

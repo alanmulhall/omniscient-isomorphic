@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "6to5-node ./bin/www",
+    "start": "6to5-node -r ./bin/www",
     "client": "webpack-dev-server -d --progress --colors"
   },
   "dependencies": {

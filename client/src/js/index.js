@@ -2,10 +2,8 @@
 // https://github.com/seanhess/personal-timeline/blob/master/app/index.jsx
 require('6to5/polyfill');
 
-//if (process.env.NODE_ENV !== 'production') {
 import omniscient from 'omniscient';
 omniscient.debug();
-//}
 
 import react from 'react';
 import {DOM} from 'react';
@@ -22,12 +20,14 @@ window.React = react;
 
 let currentPage = null;
 
-const structure = immstruct({
+let structure = immstruct({
   greeting: 'A react application',
   person: {
     name: 'alan'
   }
 });
+
+require('file?name=index.html!../index.html');
 
 function route(f) {
   return (ctx) => {
