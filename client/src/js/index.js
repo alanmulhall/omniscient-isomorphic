@@ -27,7 +27,7 @@ let structure = immstruct({
   }
 });
 
-structure.on('swap', render);
+structure.on('next-animation-frame', render);
 
 require('file?name=index.html!../index.html');
 
