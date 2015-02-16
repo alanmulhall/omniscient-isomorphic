@@ -6,7 +6,7 @@ export default component(
   'Home',
   (props) => {
     let handleChangeGreeting = () => {
-      props.cursor.update('greeting', () => 'A react application (cursor changed)');
+      return props.cursor.update('greeting', () => 'A react application (cursor changed)');
     }
 
     return (

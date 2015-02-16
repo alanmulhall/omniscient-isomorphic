@@ -8,24 +8,16 @@ omniscient.debug();
 import react from 'react';
 import {DOM} from 'react';
 const {a, br, div} = DOM;
-import immutable from 'immutable';
-import immstruct from 'immstruct';
 import App from './App';
 import Home from './Home';
 import Contact from './Contact';
 import page from 'page';
+import structure from '../../../structure';
 
 // Make React DevTools work
 window.React = react;
 
 let currentPage = null;
-
-let structure = immstruct({
-  greeting: 'A react application',
-  person: {
-    name: 'alan'
-  }
-});
 
 structure.on('next-animation-frame', render);
 

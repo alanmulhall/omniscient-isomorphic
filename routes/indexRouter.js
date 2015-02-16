@@ -2,21 +2,11 @@ import express from 'express';
 let router = express.Router();
 
 import react from 'react';
-import {DOM} from 'react';
-const {a, br, div} = DOM;
-import immutable from 'immutable';
-import immstruct from 'immstruct';
 import App from '../client/src/js/App';
 import Home from '../client/src/js/Home';
+import structure from '../structure';
 
 let app = express();
-
-let structure = immstruct({
-  greeting: 'A react application',
-  person: {
-    name: 'alan'
-  }
-});
 
 let currentPage = () => Home({cursor: structure.cursor()});
 
