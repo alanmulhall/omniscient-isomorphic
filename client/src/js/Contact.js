@@ -7,7 +7,7 @@ export default component(
   (props) => {
     return (
       div(null,
-        'This is the contact page',
+        `This is the contact page created by ${props.cursor.deref()}`,
         br(null),
         a({href: '/'}, 'go home')
       )

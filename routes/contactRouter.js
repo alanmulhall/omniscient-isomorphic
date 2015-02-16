@@ -18,7 +18,7 @@ let structure = immstruct({
   }
 });
 
-let currentPage = () => Contact({cursor: structure.cursor()});
+let currentPage = () => Contact({cursor: structure.cursor(['person', 'name'])});
 
 let component = react.renderToString(App({cursor: structure.cursor(), currentPage}));
 
